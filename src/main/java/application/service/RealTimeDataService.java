@@ -3,7 +3,6 @@ package application.service;
 import application.dto.RealTimeDataDTO;
 import application.entity.Data;
 import application.repository.DataRepository;
-import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,13 +10,12 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Service
 public class RealTimeDataService {
 
-    private static final String LACK_OF_DATA_BETWEEN_DATES_ERROR = "There are no data between given dates";
+    private static final String LACK_OF_DATA_BETWEEN_DATES_ERROR = "There is no data between given dates";
 
     private final DataRepository repository;
 

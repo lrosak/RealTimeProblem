@@ -18,4 +18,7 @@ public interface DataRepository extends CrudRepository<Data, LocalDateTime> {
     @Query("from Data where date >= :from and date <= :to and quality like 'Good'")
     List<Data> findGoodDataBetweenDates(@Param("from") LocalDateTime from, @Param("to") LocalDateTime to);
 
+    @Query("from Data where date >= :from and date <= :to and quality like 'Good' order by date")
+    List<Data> findGoodDataBetweenDatesSortedByDate(@Param("from") LocalDateTime from, @Param("to") LocalDateTime to);
+
 }

@@ -43,6 +43,12 @@
             <artifactId>guava</artifactId>
             <version>LATEST</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>LATEST</version>
+        </dependency>
+
     </dependencies>
 
     <build>
